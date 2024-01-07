@@ -1,0 +1,2 @@
+# digcloudlog
+digcloud log
