@@ -1,11 +1,11 @@
 package digcloudlog
 
 // dig cloud log
-func DCL_Info(args ...any) {
-	GetLogAdapter().Info(args...)
+func DCL_Info(format string, args ...any) {
+	GetLogAdapter().Info(format, args...)
 }
-func DCL_Error(args ...any) {
-	GetLogAdapter().Error(args...)
+func DCL_Error(format string, args ...any) {
+	GetLogAdapter().Error(format, args...)
 }
 func DCL_addStdout() {
 	GetLogAdapter().AddStdout()
