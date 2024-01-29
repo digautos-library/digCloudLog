@@ -24,14 +24,14 @@ func (g *CDCLogAdapter) Initialize() error {
 	g.dblog = false
 	return nil
 }
-func (g *CDCLogAdapter) Info(args ...any) {
-	strLog := fmt.Sprint(args...)
+func (g *CDCLogAdapter) Info(format string, args ...any) {
+	strLog := fmt.Sprintf(format, args...)
 	for _, inst := range g.instList {
 		inst.Info(strLog)
 	}
 }
-func (g *CDCLogAdapter) Error(args ...any) {
-	strLog := fmt.Sprint(args...)
+func (g *CDCLogAdapter) Error(format string, args ...any) {
+	strLog := fmt.Sprintf(format, args...)
 	for _, inst := range g.instList {
 		inst.Error(strLog)
 	}
